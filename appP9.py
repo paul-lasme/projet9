@@ -1,19 +1,8 @@
 #APP FLASK (commande : flask run)
 # Partie formulaire non utilisée (uniquement appel à l'API)
 
-from flask import Flask, render_template, jsonify, request, flash, redirect, url_for
-from flask_wtf import Form
-from wtforms.fields import StringField,BooleanField, PasswordField, TextAreaField
-from wtforms.widgets import TextArea
-import validators
-from wtforms.validators import DataRequired
-from toolbox.predict import *
-import pandas as pd
-import xgboost
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
-import os
-#import socketio
+from flask import Flask, jsonify
+
 
 
 @app.route('/')
