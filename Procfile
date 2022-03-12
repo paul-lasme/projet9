@@ -1,1 +1,1 @@
-web: sh setup.sh && python run appP9.py
+web: gunicorn main:appP9
