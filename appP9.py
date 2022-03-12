@@ -22,5 +22,5 @@ def credit():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=81)
+    app.run(debug=False)
     #app.run(debug=True,port=8080,use_reloader=False)
