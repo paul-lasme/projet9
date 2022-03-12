@@ -16,12 +16,11 @@ import os
 #import socketio
 
 
-
-@app.route(/)
-def credit(form_id):
+@app.route('/')
+def credit():
    
     #calcul prédiction défaut et probabilité de défaut
-    prediction, proba = predict_flask(form_id, dataframe)
+    #prediction, proba = predict_flask(form_id, dataframe)
 
     dict_final = {
         'prediction' : 1,
@@ -34,4 +33,5 @@ def credit(form_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8080,use_reloader=False)
+    app.run(host='0.0.0.0', port=81)
+    #app.run(debug=True,port=8080,use_reloader=False)
